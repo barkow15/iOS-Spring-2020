@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1HU-n2-iZw">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--First View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="FirstViewController" customModule="MyNotebook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your note text in here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eNh-bg-NZo">
+                                <rect key="frame" x="58" y="154" width="298" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="298" id="7wA-Kp-QWa"/>
+                                    <constraint firstAttribute="height" constant="34" id="z2H-R3-yQg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="It8-cc-6V9">
+                                <rect key="frame" x="275" y="196" width="81" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="FLe-ey-QVQ"/>
+                                    <constraint firstAttribute="width" constant="81" id="Mf1-yI-47o"/>
+                                </constraints>
+                                <state key="normal" title="Create note"/>
+                                <connections>
+                                    <action selector="createNoteBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uyO-L2-Z2D"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LeM-0I-1Z2">
+                                <rect key="frame" x="58" y="196" width="153" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Hnx-SW-nyC"/>
+                                    <constraint firstAttribute="width" constant="153" id="IDE-t9-7SD"/>
+                                </constraints>
+                                <state key="normal" title="Clear textfield"/>
+                                <connections>
+                                    <action selector="clearTextFieldBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8fg-1g-L4V"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Philip Thomas Barkow notetaking app" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDG-6L-cIP">
+                                <rect key="frame" x="16" y="102" width="383" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="383" id="Hj2-Nv-Zjh"/>
+                                    <constraint firstAttribute="height" constant="21" id="kUL-zl-3Wy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="It8-cc-6V9" secondAttribute="trailing" constant="58" id="1Q0-Ue-RIS"/>
+                            <constraint firstItem="It8-cc-6V9" firstAttribute="leading" secondItem="LeM-0I-1Z2" secondAttribute="trailing" constant="64" id="FYM-yr-8Gu"/>
+                            <constraint firstItem="zDG-6L-cIP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="FnJ-mT-KwC"/>
+                            <constraint firstItem="LeM-0I-1Z2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="58" id="HgG-Da-0gZ"/>
+                            <constraint firstItem="It8-cc-6V9" firstAttribute="top" secondItem="eNh-bg-NZo" secondAttribute="bottom" constant="8" id="J82-1Q-3dT"/>
+                            <constraint firstItem="It8-cc-6V9" firstAttribute="leading" secondItem="LeM-0I-1Z2" secondAttribute="trailing" constant="64" id="Qyj-DV-o6g"/>
+                            <constraint firstItem="eNh-bg-NZo" firstAttribute="top" secondItem="zDG-6L-cIP" secondAttribute="bottom" constant="31" id="c48-MN-Yft"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zDG-6L-cIP" secondAttribute="trailing" constant="15" id="cIt-c6-tqM"/>
+                            <constraint firstItem="eNh-bg-NZo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="58" id="etw-4L-sJW"/>
+                            <constraint firstItem="LeM-0I-1Z2" firstAttribute="top" secondItem="eNh-bg-NZo" secondAttribute="bottom" constant="8" id="gJD-bF-P5Q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eNh-bg-NZo" secondAttribute="trailing" constant="58" id="yAj-lt-DS5"/>
+                            <constraint firstItem="zDG-6L-cIP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="58" id="zL7-rg-KKb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="noteText" destination="eNh-bg-NZo" id="fSh-2q-9xf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1265" y="-508"/>
+        </scene>
+        <!--Notes-->
+        <scene sceneID="6oj-Yd-MzF">
+            <objects>
+                <tableViewController id="Q60-qR-GhQ" customClass="TableViewController" customModule="MyNotebook" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="aBg-bM-ici">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="jwb-jg-skY">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jwb-jg-skY" id="Xq0-Vt-YeJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Q60-qR-GhQ" id="lWy-8j-Jt8"/>
+                            <outlet property="delegate" destination="Q60-qR-GhQ" id="0qs-Xh-aMz"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Notes" prompt="Made by Philip Thomas Barkow" largeTitleDisplayMode="always" id="U5f-dT-z3r"/>
+                    <connections>
+                        <segue destination="yMn-Wr-hcP" kind="show" identifier="showNoteSegue" id="QiJ-uw-i4H"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uwv-N6-HNi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1265" y="192"/>
+        </scene>
+        <!--Selected Note-->
+        <scene sceneID="Nm0-Gc-mLF">
+            <objects>
+                <viewController id="yMn-Wr-hcP" customClass="ViewController" customModule="MyNotebook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="njP-hu-OLL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oKi-6d-EcC">
+                                <rect key="frame" x="87" y="266" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="i3F-ZD-sON"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Selected Note" largeTitleDisplayMode="always" id="DuI-21-Vvw"/>
+                    <connections>
+                        <outlet property="textView" destination="oKi-6d-EcC" id="Ax1-dR-a2c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dss-Y4-Xfy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-362" y="192"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="B3h-vy-6ML">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1HU-n2-iZw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="B4K-MP-Bbc">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Q60-qR-GhQ" kind="relationship" relationship="rootViewController" id="nUg-VO-Uzx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mbf-bQ-Kws" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2055.072463768116" y="191.51785714285714"/>
+        </scene>
+    </scenes>
+</document>

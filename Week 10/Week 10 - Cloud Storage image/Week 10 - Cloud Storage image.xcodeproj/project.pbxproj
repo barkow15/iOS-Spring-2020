@@ -1,0 +1,438 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2BCD616B37FA98472D53C496 /* Pods_Week_10___Cloud_Storage_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76247EC3C8898B635EF24191 /* Pods_Week_10___Cloud_Storage_image.framework */; };
+		F7B73FE224A55A3600703DA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B73FE124A55A3600703DA3 /* AppDelegate.swift */; };
+		F7B73FE424A55A3600703DA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B73FE324A55A3600703DA3 /* SceneDelegate.swift */; };
+		F7B73FE624A55A3600703DA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B73FE524A55A3600703DA3 /* ViewController.swift */; };
+		F7B73FE924A55A3600703DA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7B73FE724A55A3600703DA3 /* Main.storyboard */; };
+		F7B73FEC24A55A3600703DA3 /* Week_10___Cloud_Storage_image.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F7B73FEA24A55A3600703DA3 /* Week_10___Cloud_Storage_image.xcdatamodeld */; };
+		F7B73FEE24A55A3C00703DA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7B73FED24A55A3C00703DA3 /* Assets.xcassets */; };
+		F7B73FF124A55A3C00703DA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7B73FEF24A55A3C00703DA3 /* LaunchScreen.storyboard */; };
+		F7B73FF924A55B2F00703DA3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F7B73FF824A55B2F00703DA3 /* GoogleService-Info.plist */; };
+		F7B73FFB24A55B4900703DA3 /* CloudStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B73FFA24A55B4900703DA3 /* CloudStorage.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0C62D3E0F7560B490F34B5CB /* Pods-Week 10 - Cloud Storage image.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Week 10 - Cloud Storage image.debug.xcconfig"; path = "Target Support Files/Pods-Week 10 - Cloud Storage image/Pods-Week 10 - Cloud Storage image.debug.xcconfig"; sourceTree = "<group>"; };
+		63D852CCEAA161DA903AEE7B /* Pods-Week 10 - Cloud Storage image.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Week 10 - Cloud Storage image.release.xcconfig"; path = "Target Support Files/Pods-Week 10 - Cloud Storage image/Pods-Week 10 - Cloud Storage image.release.xcconfig"; sourceTree = "<group>"; };
+		76247EC3C8898B635EF24191 /* Pods_Week_10___Cloud_Storage_image.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Week_10___Cloud_Storage_image.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7B73FDE24A55A3600703DA3 /* Week 10 - Cloud Storage image.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Week 10 - Cloud Storage image.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7B73FE124A55A3600703DA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F7B73FE324A55A3600703DA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F7B73FE524A55A3600703DA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F7B73FE824A55A3600703DA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F7B73FEB24A55A3600703DA3 /* Week_10___Cloud_Storage_image.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Week_10___Cloud_Storage_image.xcdatamodel"; sourceTree = "<group>"; };
+		F7B73FED24A55A3C00703DA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F7B73FF024A55A3C00703DA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F7B73FF224A55A3C00703DA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7B73FF824A55B2F00703DA3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F7B73FFA24A55B4900703DA3 /* CloudStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudStorage.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F7B73FDB24A55A3600703DA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BCD616B37FA98472D53C496 /* Pods_Week_10___Cloud_Storage_image.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7B85B068979699D3B1720DC5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0C62D3E0F7560B490F34B5CB /* Pods-Week 10 - Cloud Storage image.debug.xcconfig */,
+				63D852CCEAA161DA903AEE7B /* Pods-Week 10 - Cloud Storage image.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A1FA9E32B5470402484C4CDD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76247EC3C8898B635EF24191 /* Pods_Week_10___Cloud_Storage_image.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F7B73FD524A55A3500703DA3 = {
+			isa = PBXGroup;
+			children = (
+				F7B73FE024A55A3600703DA3 /* Week 10 - Cloud Storage image */,
+				F7B73FDF24A55A3600703DA3 /* Products */,
+				7B85B068979699D3B1720DC5 /* Pods */,
+				A1FA9E32B5470402484C4CDD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F7B73FDF24A55A3600703DA3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7B73FDE24A55A3600703DA3 /* Week 10 - Cloud Storage image.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F7B73FE024A55A3600703DA3 /* Week 10 - Cloud Storage image */ = {
+			isa = PBXGroup;
+			children = (
+				F7B73FF824A55B2F00703DA3 /* GoogleService-Info.plist */,
+				F7B73FE124A55A3600703DA3 /* AppDelegate.swift */,
+				F7B73FE324A55A3600703DA3 /* SceneDelegate.swift */,
+				F7B73FE524A55A3600703DA3 /* ViewController.swift */,
+				F7B73FFA24A55B4900703DA3 /* CloudStorage.swift */,
+				F7B73FE724A55A3600703DA3 /* Main.storyboard */,
+				F7B73FED24A55A3C00703DA3 /* Assets.xcassets */,
+				F7B73FEF24A55A3C00703DA3 /* LaunchScreen.storyboard */,
+				F7B73FF224A55A3C00703DA3 /* Info.plist */,
+				F7B73FEA24A55A3600703DA3 /* Week_10___Cloud_Storage_image.xcdatamodeld */,
+			);
+			path = "Week 10 - Cloud Storage image";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F7B73FDD24A55A3600703DA3 /* Week 10 - Cloud Storage image */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7B73FF524A55A3C00703DA3 /* Build configuration list for PBXNativeTarget "Week 10 - Cloud Storage image" */;
+			buildPhases = (
+				77E45CA7ADD12E34432F3023 /* [CP] Check Pods Manifest.lock */,
+				F7B73FDA24A55A3600703DA3 /* Sources */,
+				F7B73FDB24A55A3600703DA3 /* Frameworks */,
+				F7B73FDC24A55A3600703DA3 /* Resources */,
+				BBAB25AA0DC6251914ED10E9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Week 10 - Cloud Storage image";
+			productName = "Week 10 - Cloud Storage image";
+			productReference = F7B73FDE24A55A3600703DA3 /* Week 10 - Cloud Storage image.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F7B73FD624A55A3500703DA3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Philip Barkow";
+				TargetAttributes = {
+					F7B73FDD24A55A3600703DA3 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+				};
+			};
+			buildConfigurationList = F7B73FD924A55A3500703DA3 /* Build configuration list for PBXProject "Week 10 - Cloud Storage image" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F7B73FD524A55A3500703DA3;
+			productRefGroup = F7B73FDF24A55A3600703DA3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F7B73FDD24A55A3600703DA3 /* Week 10 - Cloud Storage image */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F7B73FDC24A55A3600703DA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7B73FF124A55A3C00703DA3 /* LaunchScreen.storyboard in Resources */,
+				F7B73FF924A55B2F00703DA3 /* GoogleService-Info.plist in Resources */,
+				F7B73FEE24A55A3C00703DA3 /* Assets.xcassets in Resources */,
+				F7B73FE924A55A3600703DA3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		77E45CA7ADD12E34432F3023 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Week 10 - Cloud Storage image-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBAB25AA0DC6251914ED10E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Week 10 - Cloud Storage image/Pods-Week 10 - Cloud Storage image-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Week 10 - Cloud Storage image/Pods-Week 10 - Cloud Storage image-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Week 10 - Cloud Storage image/Pods-Week 10 - Cloud Storage image-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F7B73FDA24A55A3600703DA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7B73FFB24A55B4900703DA3 /* CloudStorage.swift in Sources */,
+				F7B73FEC24A55A3600703DA3 /* Week_10___Cloud_Storage_image.xcdatamodeld in Sources */,
+				F7B73FE624A55A3600703DA3 /* ViewController.swift in Sources */,
+				F7B73FE224A55A3600703DA3 /* AppDelegate.swift in Sources */,
+				F7B73FE424A55A3600703DA3 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F7B73FE724A55A3600703DA3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7B73FE824A55A3600703DA3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F7B73FEF24A55A3C00703DA3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7B73FF024A55A3C00703DA3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F7B73FF324A55A3C00703DA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F7B73FF424A55A3C00703DA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F7B73FF624A55A3C00703DA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C62D3E0F7560B490F34B5CB /* Pods-Week 10 - Cloud Storage image.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T3NF67V9Q7;
+				INFOPLIST_FILE = "Week 10 - Cloud Storage image/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "philipbarkow.Week-10---Cloud-Storage-image";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F7B73FF724A55A3C00703DA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63D852CCEAA161DA903AEE7B /* Pods-Week 10 - Cloud Storage image.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T3NF67V9Q7;
+				INFOPLIST_FILE = "Week 10 - Cloud Storage image/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "philipbarkow.Week-10---Cloud-Storage-image";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F7B73FD924A55A3500703DA3 /* Build configuration list for PBXProject "Week 10 - Cloud Storage image" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7B73FF324A55A3C00703DA3 /* Debug */,
+				F7B73FF424A55A3C00703DA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7B73FF524A55A3C00703DA3 /* Build configuration list for PBXNativeTarget "Week 10 - Cloud Storage image" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7B73FF624A55A3C00703DA3 /* Debug */,
+				F7B73FF724A55A3C00703DA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F7B73FEA24A55A3600703DA3 /* Week_10___Cloud_Storage_image.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F7B73FEB24A55A3600703DA3 /* Week_10___Cloud_Storage_image.xcdatamodel */,
+			);
+			currentVersion = F7B73FEB24A55A3600703DA3 /* Week_10___Cloud_Storage_image.xcdatamodel */;
+			path = "Week_10___Cloud_Storage_image.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F7B73FD624A55A3500703DA3 /* Project object */;
+}
