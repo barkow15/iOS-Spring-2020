@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>2046218727-amvbdte2d9b0m7ddjm0nkt2d2dnqei1k.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.2046218727-amvbdte2d9b0m7ddjm0nkt2d2dnqei1k</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDeIZpyY3Yhkrj5LfkkqU0PCFjV0xdz0bM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>2046218727</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>philipbarkow.FacebookLoginApp</string>
+	<key>PROJECT_ID</key>
+	<string>week14login</string>
+	<key>STORAGE_BUCKET</key>
+	<string>week14login.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:2046218727:ios:8d43564abd9f0e921d2d42</string>
+	<key>DATABASE_URL</key>
+	<string>https://week14login.firebaseio.com</string>
+</dict>
+</plist>
