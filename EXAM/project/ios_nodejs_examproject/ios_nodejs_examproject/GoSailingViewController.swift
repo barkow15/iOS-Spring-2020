@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import Firebase
 
 class GoSailingViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     @IBOutlet weak var uiMap: MKMapView!
@@ -16,7 +17,8 @@ class GoSailingViewController: UIViewController, CLLocationManagerDelegate, MKMa
     @IBOutlet weak var uiInitLocationTrackingButton: UIButton!
     
     // Create Const CLLocationManager
-    let locationManager:CLLocationManager = CLLocationManager()
+    var locationManager:CLLocationManager!
+    var firebaseManager:FirebaseManager!
     var locationTrackingStatus = false
     // Use a set because we don't want the coordinates ordered and we want values to be unique
     var locationsTracked = [[Any]]()
@@ -25,12 +27,18 @@ class GoSailingViewController: UIViewController, CLLocationManagerDelegate, MKMa
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Init locationmanager
+        self.locationManager = CLLocationManager()
+        
+        // Init firebasemanager
+        self.firebaseManager = FirebaseManager(parentVC: self)
+        
         // Config og play/stop button //
         uiInitLocationTrackingButton.setImage(UIImage.fontAwesomeIcon(name: .playCircle, style: .regular, textColor: UIColor.systemBlue, size: CGSize(width: 100, height: 100)), for: .normal)
         
         // Config of uiMap //
         self.uiMap.delegate = self
-        self.uiMap.mapType = MKMapType.standard
+        self.uiMap.mapType = MKMapType(rawValue: 0)!
         self.uiMap.isZoomEnabled = true
         self.uiMap.isScrollEnabled = true
         
@@ -98,19 +106,17 @@ class GoSailingViewController: UIViewController, CLLocationManagerDelegate, MKMa
             // Change button icon back to play
             self.uiInitLocationTrackingButton.setImage(UIImage.fontAwesomeIcon(name: .playCircle, style: .regular, textColor: UIColor.systemBlue, size: CGSize(width: 100, height: 100)), for: .normal)
             
-            resetGPSData()
+            self.firebaseManager.createDayBySea(date: Date.init(), coordinates: self.listOfGPSLocationsForUIMap)
+            
+            // Resets the data so another voyage may begin
+            self.resetGPSData()
         }
     }
+    
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     {
         // Handle centering on current location
-        if let currentLocation = locations.last{
-            let center = CLLocationCoordinate2D(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
-            let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001))
-            self.uiMap.setRegion(region, animated: true)
-        }
-        
         for currentLocation in locations{
             // Send request to db whenever the count
             if(listOfGPSLocations.count == 5){
@@ -150,14 +156,20 @@ class GoSailingViewController: UIViewController, CLLocationManagerDelegate, MKMa
             }
             
             // Handle begin drawing polyline
+            /*
             let polyLine = MKPolyline(coordinates: listOfGPSLocationsForUIMap, count: listOfGPSLocationsForUIMap.count)
             self.uiMap?.addOverlay(polyLine)
             print(listOfGPSLocationsForUIMap)
+            */
             
-            var coordinatePtr = UnsafeMutablePointer<CLLocationCoordinate2D>(mutating: listOfGPSLocationsForUIMap)
+            /*
+            let coordinatePtr = UnsafeMutablePointer<CLLocationCoordinate2D>(mutating: listOfGPSLocationsForUIMap)
             let trackPolygon = MKPolyline(coordinates: coordinatePtr, count: listOfGPSLocationsForUIMap.count)
             uiMap.removeOverlays(uiMap.overlays)
+            
             uiMap.addOverlay(trackPolygon)
+            */
+//            createOrUpdatePolyline(mapView: self.uiMap, coordinates: self.listOfGPSLocationsForUIMap, currentlocation: <#T##CLLocationCoordinate2D#>)
             
             // Build data structure for submitting to node.js application
             let locationCoordinate = [Double(currentLocation.coordinate.latitude), Double(currentLocation.coordinate.longitude)]
@@ -169,7 +181,40 @@ class GoSailingViewController: UIViewController, CLLocationManagerDelegate, MKMa
             
             listOfGPSLocations.append(gpsLocation)
             listOfGPSLocationsForUIMap.append(CLLocationCoordinate2D(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)) // For being able to use when rendering polyline
+            
+            if let currentLocation = locations.last{
+                
+                let center = CLLocationCoordinate2D(latitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude)
+                
+                createOrUpdatePolyline(mapView: self.uiMap, coordinates: self.listOfGPSLocationsForUIMap, currentlocation: center)
+            }
+
         }
+    }
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        if overlay is MKPolyline {
+            let polylineRenderer = MKPolylineRenderer(overlay: overlay)
+            polylineRenderer.strokeColor = UIColor.blue
+            polylineRenderer.lineWidth = 4
+            return polylineRenderer
+        }else{
+            return MKOverlayRenderer()
+        }
+    }
+    
+    func createOrUpdatePolyline(mapView:MKMapView, coordinates:[CLLocationCoordinate2D], currentlocation:CLLocationCoordinate2D) {
+        // Clear overlays before drawingnew ones
+//        mapView.removeOverlays(mapView.overlays)
+        
+        let geodesic = MKGeodesicPolyline(coordinates: coordinates, count: coordinates.count)
+        mapView.addOverlay(geodesic)
+
+        
+        let span = MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001)
+        let region1 = MKCoordinateRegion(center: currentlocation, span: span)
+        mapView.setRegion(region1, animated: true)
+
     }
     
     public struct GPSLocation: Codable {

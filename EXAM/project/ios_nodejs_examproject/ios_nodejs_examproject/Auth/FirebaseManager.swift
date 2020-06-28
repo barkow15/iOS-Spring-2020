@@ -8,13 +8,17 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
+import MapKit
 
 class FirebaseManager{
     var auth = Auth.auth()
     let parentVC:UIViewController
+    var dbRef: DatabaseReference!
     
     init(parentVC: UIViewController){
         self.parentVC = parentVC
+        self.dbRef = Database.database().reference()
     }
     
     func signUp(email:String, pwd:String) {
@@ -63,5 +67,9 @@ class FirebaseManager{
         }catch let error{
             print("eror signing out \(error.localizedDescription)")
         }
+    }
+    
+    func createDayBySea(date:Date, coordinates: [CLLocationCoordinate2D]){
+        
     }
 }

@@ -35,7 +35,6 @@ class FacebookManager{
                         
                         self.makeGraphRequest()
                         
-                        
                     break
                     
                     case .cancelled:
