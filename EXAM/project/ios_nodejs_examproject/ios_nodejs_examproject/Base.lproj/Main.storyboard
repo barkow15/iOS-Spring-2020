@@ -10,34 +10,68 @@
         <!--welcomePage-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController title="welcomePage" id="9pv-A4-QxB" customClass="FirstViewController" customModule="ios_nodejs_examproject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="welcomePage" id="9pv-A4-QxB" customClass="WelcomePageViewController" customModule="ios_nodejs_examproject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" text="Welcome to Days By Sea!" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <rect key="frame" x="23" y="105" width="329" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Welcome to Days By Sea!" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
+                                <rect key="frame" x="23" y="81" width="329" height="36"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Good to see you {username}" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
-                                <rect key="frame" x="90" y="149" width="194.5" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good to see you here!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
+                                <rect key="frame" x="90" y="149" width="194.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ME8-Lg-tdM">
+                                <rect key="frame" x="23" y="207" width="329" height="189"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Choose one of the tabs in the bottom to get started. Or if you feel like you've had enough you can go ahead and press the logout button instead. See you around.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCf-zh-vXP">
+                                <rect key="frame" x="23" y="459" width="329" height="30"/>
+                                <state key="normal" title="Logout button"/>
+                                <connections>
+                                    <action selector="logoutBtnPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="O6K-1b-HV0"/>
+                                    <segue destination="jME-QL-28D" kind="unwind" unwindAction="unwindToLogin:" id="kHR-0N-O0e"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="A5M-7J-77L" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="90" id="4fG-Jf-HFW"/>
+                            <constraint firstItem="hCf-zh-vXP" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="23" id="4h8-yq-OQ5"/>
+                            <constraint firstItem="hCf-zh-vXP" firstAttribute="top" secondItem="ME8-Lg-tdM" secondAttribute="bottom" constant="63" id="56w-CD-MQo"/>
+                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="81" id="EWt-py-mmj"/>
+                            <constraint firstItem="ME8-Lg-tdM" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="23" id="LPa-lJ-l91"/>
+                            <constraint firstItem="ME8-Lg-tdM" firstAttribute="top" secondItem="A5M-7J-77L" secondAttribute="bottom" constant="38.5" id="Lcg-nT-CGf"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="A5M-7J-77L" secondAttribute="trailing" constant="90.5" id="bBH-V6-iLH"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="KQZ-1w-vlD" secondAttribute="trailing" constant="23" id="edG-ew-klw"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="hCf-zh-vXP" secondAttribute="bottom" constant="129" id="g3b-HY-T9J"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="hCf-zh-vXP" secondAttribute="trailing" constant="23" id="gSw-qo-akQ"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="ME8-Lg-tdM" secondAttribute="trailing" constant="23" id="hSr-FR-HIJ"/>
+                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="23" id="vCq-tO-nHu"/>
+                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="32" id="z77-aJ-vXh"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="acW-dT-cKf"/>
                     <navigationItem key="navigationItem" id="b72-ye-9Js"/>
+                    <connections>
+                        <outlet property="uiIWelcomeMessageLabel" destination="A5M-7J-77L" id="qmx-Gz-Y2U"/>
+                        <outlet property="uiLoginButton" destination="hCf-zh-vXP" id="Nwf-7I-BJO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+                <exit id="jME-QL-28D" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1009" y="-465"/>
+            <point key="canvasLocation" x="1008.8" y="-465.51724137931041"/>
         </scene>
         <!--Go sailing-->
         <scene sceneID="wg7-f3-ORb">
@@ -102,6 +136,7 @@
                     <connections>
                         <outlet property="uiInitLocationTrackingButton" destination="6qC-i6-gdU" id="8c7-FW-f0X"/>
                         <outlet property="uiMap" destination="LcN-qd-rOa" id="IK5-MZ-V77"/>
+                        <outlet property="uiSubtitleTextView" destination="P6j-bf-Xuu" id="wat-6c-8SQ"/>
                         <outlet property="uiTitleLabel" destination="Cz2-ff-c9d" id="eT4-zk-eew"/>
                     </connections>
                 </viewController>
@@ -132,7 +167,7 @@
                     </view>
                     <connections>
                         <outlet property="loginButton" destination="cbu-tD-mWg" id="NYo-uh-kQg"/>
-                        <segue destination="49e-Tb-3d3" kind="presentation" identifier="frontpageSeg" modalPresentationStyle="fullScreen" id="JtE-7C-Ebd"/>
+                        <segue destination="49e-Tb-3d3" kind="presentation" identifier="FrontPageSeg" modalPresentationStyle="fullScreen" id="JtE-7C-Ebd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jCo-7V-wLI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -151,8 +186,8 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" destinationCreationSelector="welcomePageSegue" id="u7Y-xg-7CH"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" destinationCreationSelector="goSailingSegue" id="lzU-1b-eKA"/>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="LCh-Qg-MqC" kind="relationship" relationship="viewControllers" id="Mdn-wA-PjS"/>
                     </connections>
                 </tabBarController>

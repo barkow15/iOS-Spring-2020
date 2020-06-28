@@ -52,7 +52,7 @@ class FirebaseManager{
             if error == nil{
                 print("logged in to firebase, using facebook \(result?.description)")
                 
-            self.parentVC.performSegue(withIdentifier: "frontpageSeg", sender: nil)
+                self.parentVC.performSegue(withIdentifier: "FrontPageSeg", sender: nil)
 
             }else{
                 print("Failed to login to firebase, using facebook \(error.debugDescription)")
@@ -61,15 +61,13 @@ class FirebaseManager{
         }
     }
  
-    func signOut(){
+    func signOut() -> Bool{
         do{
             try auth.signOut()
+            return true
         }catch let error{
             print("eror signing out \(error.localizedDescription)")
+            return false
         }
-    }
-    
-    func createDayBySea(date:Date, coordinates: [CLLocationCoordinate2D]){
-        
     }
 }

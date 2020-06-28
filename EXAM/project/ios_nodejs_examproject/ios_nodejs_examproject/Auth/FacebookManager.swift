@@ -78,7 +78,7 @@ class FacebookManager{
                     
 //                    print("got data from facebook \(imageURL)")
                     self.fbProfileInfo = fbProfile(id: id , name: name,email: email, profilePictureUrl:imageURL)
-                    print(self.fbProfileInfo!)
+//                    print(self.fbProfileInfo!)
 //                    fbProfileRet = fbProfile(id: id , name: name, imageURL: imageURL["url"]!, email: email)
                 }else{
                     print("Error getting data from Facebook \(error.debugDescription)")

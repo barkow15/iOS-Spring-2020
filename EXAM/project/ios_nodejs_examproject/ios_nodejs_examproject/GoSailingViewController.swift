@@ -15,10 +15,12 @@ class GoSailingViewController: UIViewController, CLLocationManagerDelegate, MKMa
     @IBOutlet weak var uiMap: MKMapView!
     @IBOutlet weak var uiTitleLabel: UILabel!
     @IBOutlet weak var uiInitLocationTrackingButton: UIButton!
+    @IBOutlet weak var uiSubtitleTextView: UITextView!
     
     // Create Const CLLocationManager
     var locationManager:CLLocationManager!
     var firebaseManager:FirebaseManager!
+    var daysBySeaFirebaseModel = DaysBySeaFirebaseModel()
     var locationTrackingStatus = false
     // Use a set because we don't want the coordinates ordered and we want values to be unique
     var locationsTracked = [[Any]]()
@@ -75,6 +77,8 @@ class GoSailingViewController: UIViewController, CLLocationManagerDelegate, MKMa
             
             // Change uiTitleLabel text
             self.uiTitleLabel.text = "Smooth sailing skipper!"
+            // Change uiSubtitleTextView text
+            self.uiSubtitleTextView.text = "Voyage en route! Now recording data of your travels.\n(Please be safe & remember a life west)"
             
             // Show location pin
             self.uiMap.showsUserLocation = true;
@@ -87,7 +91,8 @@ class GoSailingViewController: UIViewController, CLLocationManagerDelegate, MKMa
         }else if(locationTrackingStatus == true){
             // Change uiTitleLabel text
             self.uiTitleLabel.text = "Feeling adventurous?"
-            
+            // Change uiSubtitleTextView text
+            self.uiSubtitleTextView.text = "Start recording data for your next voyage by clicking on the play button"
             
             self.locationTrackingStatus = false;
             print("Stopped tracking location")
@@ -106,7 +111,7 @@ class GoSailingViewController: UIViewController, CLLocationManagerDelegate, MKMa
             // Change button icon back to play
             self.uiInitLocationTrackingButton.setImage(UIImage.fontAwesomeIcon(name: .playCircle, style: .regular, textColor: UIColor.systemBlue, size: CGSize(width: 100, height: 100)), for: .normal)
             
-            self.firebaseManager.createDayBySea(date: Date.init(), coordinates: self.listOfGPSLocationsForUIMap)
+//            self.firebaseManager.createDayBySea(date: Date.init(), coordinates: self.listOfGPSLocationsForUIMap)
             
             // Resets the data so another voyage may begin
             self.resetGPSData()
@@ -121,7 +126,7 @@ class GoSailingViewController: UIViewController, CLLocationManagerDelegate, MKMa
             // Send request to db whenever the count
             if(listOfGPSLocations.count == 5){
                 print("Tracked 5 locations sending request to server")
-            
+                print(listOfGPSLocations)
                 //let jsonData = try? JSONSerialization.data(withJSONObject: locationsTracked)
 
                 let jsonData = try! JSONEncoder().encode(listOfGPSLocations)
@@ -175,6 +180,7 @@ class GoSailingViewController: UIViewController, CLLocationManagerDelegate, MKMa
             let locationCoordinate = [Double(currentLocation.coordinate.latitude), Double(currentLocation.coordinate.longitude)]
             
             locationsTracked.append(locationCoordinate);
+            print(locationCoordinate)
             //print("Latitude is \(currentLocation.coordinate.latitude) : Longitude is \(currentLocation.coordinate.longitude)")
 
             let gpsLocation = GPSLocation(lat: Double(currentLocation.coordinate.latitude), lng: Double(currentLocation.coordinate.latitude))
@@ -195,7 +201,7 @@ class GoSailingViewController: UIViewController, CLLocationManagerDelegate, MKMa
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         if overlay is MKPolyline {
             let polylineRenderer = MKPolylineRenderer(overlay: overlay)
-            polylineRenderer.strokeColor = UIColor.blue
+            polylineRenderer.strokeColor = UIColor.systemBlue
             polylineRenderer.lineWidth = 4
             return polylineRenderer
         }else{

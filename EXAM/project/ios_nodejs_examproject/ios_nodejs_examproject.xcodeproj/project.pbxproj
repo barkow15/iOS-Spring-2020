@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3D30E2B884A914A5BDD80210 /* Pods_ios_nodejs_examproject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B0C481666DD88E987E1D714 /* Pods_ios_nodejs_examproject.framework */; };
+		F726CA0724A92D6500B1C50B /* DaysBySeaFirebaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F726CA0624A92D6500B1C50B /* DaysBySeaFirebaseModel.swift */; };
 		F78463A8249595650069CE87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78463A7249595650069CE87 /* AppDelegate.swift */; };
 		F78463AA249595650069CE87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78463A9249595650069CE87 /* SceneDelegate.swift */; };
 		F78463AC249595650069CE87 /* WelcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78463AB249595650069CE87 /* WelcomePageViewController.swift */; };
@@ -27,6 +28,7 @@
 		1B0C481666DD88E987E1D714 /* Pods_ios_nodejs_examproject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_nodejs_examproject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DB03FD47C86BFCD87AAB3F0 /* Pods-ios_nodejs_examproject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_nodejs_examproject.release.xcconfig"; path = "Target Support Files/Pods-ios_nodejs_examproject/Pods-ios_nodejs_examproject.release.xcconfig"; sourceTree = "<group>"; };
 		97007D229574E49A9A288DFD /* Pods-ios_nodejs_examproject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios_nodejs_examproject.debug.xcconfig"; path = "Target Support Files/Pods-ios_nodejs_examproject/Pods-ios_nodejs_examproject.debug.xcconfig"; sourceTree = "<group>"; };
+		F726CA0624A92D6500B1C50B /* DaysBySeaFirebaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysBySeaFirebaseModel.swift; sourceTree = "<group>"; };
 		F78463A4249595650069CE87 /* ios_nodejs_examproject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios_nodejs_examproject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F78463A7249595650069CE87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F78463A9249595650069CE87 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F726CA0524A92CA800B1C50B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F726CA0624A92D6500B1C50B /* DaysBySeaFirebaseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		F784639B249595650069CE87 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +104,7 @@
 		F78463A6249595650069CE87 /* ios_nodejs_examproject */ = {
 			isa = PBXGroup;
 			children = (
+				F726CA0524A92CA800B1C50B /* Model */,
 				F7AFDCA524A840E300AC627B /* Auth */,
 				F78463A7249595650069CE87 /* AppDelegate.swift */,
 				F78463A9249595650069CE87 /* SceneDelegate.swift */,
@@ -242,6 +253,7 @@
 				F78463A8249595650069CE87 /* AppDelegate.swift in Sources */,
 				F7AFDCAB24A8D1D100AC627B /* TabBarViewController.swift in Sources */,
 				F7AFDCA424A83E1C00AC627B /* FirebaseManager.swift in Sources */,
+				F726CA0724A92D6500B1C50B /* DaysBySeaFirebaseModel.swift in Sources */,
 				F7AFDC9A24A7FD3200AC627B /* Login.swift in Sources */,
 				F78463B4249595650069CE87 /* ios_nodejs_examproject.xcdatamodeld in Sources */,
 				F78463AA249595650069CE87 /* SceneDelegate.swift in Sources */,
