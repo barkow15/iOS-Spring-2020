@@ -6,14 +6,14 @@
 //  Copyright © 2020 Philip Barkow. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import FirebaseAuth
 
 class FirebaseManager{
     var auth = Auth.auth()
-    let parentVC:ViewController
+    let parentVC:UIViewController
     
-    init(parentVC: ViewController){
+    init(parentVC: UIViewController){
         self.parentVC = parentVC
     }
     
@@ -32,7 +32,7 @@ class FirebaseManager{
             if error == nil{
                 print("successfully logged in to Firebase \(result.debugDescription)")
                 
-                self.parentVC.presentSecetVC() // Show secretVC
+//                self.parentVC.presentSecetVC() // Show secretVC
             }else{
                 print("Failed to login to firebase\(result.debugDescription)")
                 print("Email/Password used to login: \(email) / \(pwd)")
@@ -48,7 +48,8 @@ class FirebaseManager{
             if error == nil{
                 print("logged in to firebase, using facebook \(result?.description)")
                 
-                self.parentVC.presentSecetVC() // Show secretVC
+            self.parentVC.performSegue(withIdentifier: "frontpageSeg", sender: nil)
+
             }else{
                 print("Failed to login to firebase, using facebook \(error.debugDescription)")
             }
